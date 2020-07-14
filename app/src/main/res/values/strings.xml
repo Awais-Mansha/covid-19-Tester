@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Covid-19 Tester</string>
+    <string-array name="province_array">
+        <item>Punjab</item>
+        <item>Sindh</item>
+        <item>Balochistan</item>
+        <item>NWFP</item>
+        <item>Jammu and Kashmir</item>
+    </string-array>
 </resources>

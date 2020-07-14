@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_location"
+    tools:context=".MainActivity">
+<LinearLayout
+    android:id="@+id/COUNTRY_LINEARLAYOUT"
+    android:paddingTop="52dp"
+    android:paddingLeft="32dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:text="Your Country"></TextView>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:paddingTop="24dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RadioButton android:id="@+id/pakistan_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pakistan"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/other_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:text="Other"
+            android:textColor="@android:color/white"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+    <EditText
+        android:id="@+id/enter_other_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:inputType="text"
+        android:paddingTop="16dp"
+        android:hint="Enter Your Country"></EditText>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/COUNTRY_LINEARLAYOUT"
+        android:id="@+id/PROVINCE_LINEARLAYOUT"
+        android:paddingTop="52dp"
+        android:paddingLeft="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="Your Province"></TextView>
+        <Spinner
+            android:paddingTop="24dp"
+            android:id="@+id/province_spinner"
+            android:layout_width="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/enter_other_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:inputType="text"
+            android:paddingTop="16dp"
+            android:hint="Enter Your Province"></EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@id/PROVINCE_LINEARLAYOUT"
+        android:id="@+id/CITY_LINEARLAYOUT"
+        android:paddingTop="52dp"
+        android:paddingLeft="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="Your City"></TextView>
+        <Spinner
+            android:paddingTop="24dp"
+            android:id="@+id/city_spinner"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/enter_other_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:inputType="text"
+            android:paddingTop="16dp"
+            android:hint="Enter Your City"></EditText>
+    </LinearLayout>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:textAppearance="?android:textAppearanceLarge"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:textStyle="bold"
+    android:textColor="@android:color/white"
+    android:background="@android:color/holo_red_light"
+    android:layout_marginBottom="46dp"
+    android:text="Next"></Button>
+</RelativeLayout>
